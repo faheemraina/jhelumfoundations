@@ -1,0 +1,46 @@
+{
+  "programs": [
+    {
+      "title": "AzmatEDal",
+      "description": "A multi-year ecological restoration mission to restore Dal Lake's water quality, reduce pollution, and rebuild tourism-linked livelihoods for communities that depend on the lake.",
+      "image": "https://images.unsplash.com/photo-1547036967-23d11aacaee0?w=800",
+      "tags": ["Lake Restoration", "Tourism", "Water Quality"],
+      "link": null
+    },
+    {
+      "title": "KhabeTabir",
+      "description": "Cultural revival & handicraft livelihoods initiative that documents, preserves and commercializes traditional Kashmiri handicrafts while creating market access for artisans.",
+      "image": "https://images.unsplash.com/photo-1452860606245-08befc0ff44b?w=800",
+      "tags": ["Handicrafts", "Cultural Heritage", "Market Access"],
+      "link": null
+    },
+    {
+      "title": "Seekho Aur Kamwo",
+      "description": "Vocational training program offering market-relevant courses in hospitality, IT, tailoring, and health support services with strong placement support and employer linkages.",
+      "image": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800",
+      "tags": ["Skill Training", "PMKVY Aligned", "Employment"],
+      "link": null
+    },
+    {
+      "title": "Mai Roshin",
+      "description": "Women's empowerment program expanding women's economic participation through tailored training, micro-enterprise grants, and community safety-net systems.",
+      "image": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800",
+      "tags": ["Women Empowerment", "Microenterprise", "Financial Literacy"],
+      "link": null
+    },
+    {
+      "title": "SIPDA",
+      "description": "Social Inclusion & Placement Driven Action ensures marginalized groups gain access to market-linked skills and job placement services with barrier reduction support.",
+      "image": "https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=800",
+      "tags": ["Social Inclusion", "Job Placement", "Equity"],
+      "link": null
+    },
+    {
+      "title": "PMKVY Initiatives",
+      "description": "Government-aligned skill development courses providing recognized certifications that improve employability through NSDC/PMKVY standards and placement support.",
+      "image": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800",
+      "tags": ["Government Aligned", "Certification", "NSDC Partner"],
+      "link": null
+    }
+  ]
+}

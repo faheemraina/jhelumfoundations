@@ -1,0 +1,946 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jhelum Foundation - Restoring Rivers, Restoring Lives</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-blue: #1e3a8a;
+            --secondary-blue: #3b82f6;
+            --accent-green: #10b981;
+            --text-dark: #1f2937;
+            --text-light: #6b7280;
+            --bg-light: #f9fafb;
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            overflow-x: hidden;
+        }
+
+        /* Header & Navigation */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        nav {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-blue);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--secondary-blue);
+        }
+
+        .cta-button {
+            background: var(--accent-green);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+        }
+
+        .mobile-menu {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+        }
+
+        .mobile-menu span {
+            width: 25px;
+            height: 3px;
+            background: var(--text-dark);
+            transition: all 0.3s;
+        }
+
+        /* Hero Section */
+        .hero {
+            margin-top: 80px;
+            height: 600px;
+            background: linear-gradient(135deg, rgba(30, 58, 138, 0.9), rgba(59, 130, 246, 0.8)),
+                        url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1600') center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            padding: 2rem;
+            animation: fadeInUp 1s ease;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            font-weight: 800;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary, .btn-secondary {
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            font-size: 1.1rem;
+        }
+
+        .btn-primary {
+            background: var(--accent-green);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #059669;
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background: white;
+            color: var(--primary-blue);
+        }
+
+        .btn-secondary:hover {
+            background: var(--bg-light);
+            transform: translateY(-2px);
+        }
+
+        /* Quick Facts */
+        .quick-facts {
+            background: var(--bg-light);
+            padding: 3rem 2rem;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .facts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .fact-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .fact-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .fact-number {
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--secondary-blue);
+            margin-bottom: 0.5rem;
+        }
+
+        /* Section Styles */
+        section {
+            padding: 5rem 2rem;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--primary-blue);
+            font-weight: 700;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: var(--text-light);
+            max-width: 700px;
+            margin: -2rem auto 3rem;
+            font-size: 1.1rem;
+        }
+
+        /* About Section */
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-image {
+            width: 100%;
+            height: 400px;
+            background: url('https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800') center/cover;
+            border-radius: 16px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+        }
+
+        .about-text h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: var(--primary-blue);
+        }
+
+        .about-text p {
+            color: var(--text-light);
+            margin-bottom: 1rem;
+            line-height: 1.8;
+        }
+
+        /* Founders Section */
+        .founders {
+            background: var(--bg-light);
+        }
+
+        .founders-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 3rem;
+        }
+
+        .founder-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 16px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .founder-header {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .founder-avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2rem;
+            font-weight: 700;
+        }
+
+        .founder-info h3 {
+            color: var(--primary-blue);
+            margin-bottom: 0.25rem;
+        }
+
+        .founder-info p {
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        .founder-message {
+            color: var(--text-light);
+            line-height: 1.8;
+        }
+
+        /* Programs Section */
+        .programs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .program-card {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .program-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+        }
+
+        .program-image {
+            height: 220px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .program-content {
+            padding: 2rem;
+        }
+
+        .program-content h3 {
+            color: var(--primary-blue);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .program-content p {
+            color: var(--text-light);
+            margin-bottom: 1rem;
+            line-height: 1.7;
+        }
+
+        .program-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .tag {
+            background: var(--bg-light);
+            color: var(--secondary-blue);
+            padding: 0.4rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        /* Partners Section */
+        .partners {
+            background: var(--primary-blue);
+            color: white;
+        }
+
+        .partners .section-title {
+            color: white;
+        }
+
+        .partners-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .partner-card {
+            background: rgba(255,255,255,0.1);
+            padding: 2rem;
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .partner-card h3 {
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .partner-card p {
+            opacity: 0.9;
+            line-height: 1.7;
+        }
+
+        /* Impact Numbers */
+        .impact-stats {
+            background: linear-gradient(135deg, var(--accent-green), #059669);
+            color: white;
+            text-align: center;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 3rem;
+        }
+
+        .stat-item h3 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-item p {
+            font-size: 1.1rem;
+            opacity: 0.95;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: var(--bg-light);
+            text-align: center;
+        }
+
+        .cta-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--text-dark);
+            color: white;
+            padding: 4rem 2rem 2rem;
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 1rem;
+            color: var(--accent-green);
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            display: block;
+            margin-bottom: 0.5rem;
+            transition: color 0.3s;
+        }
+
+        .footer-section a:hover {
+            color: white;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.3s;
+        }
+
+        .social-icon:hover {
+            background: var(--accent-green);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: rgba(255,255,255,0.6);
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            animation: fadeInUp 0.8s ease;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu {
+                display: flex;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .founders-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .programs-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Smooth Scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo">Jhelum Foundation</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#programs">Programs</a></li>
+                <li><a href="#partners">Partners</a></li>
+                <li><a href="#impact">Impact</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <a href="#donate" class="cta-button">Donate</a>
+            <div class="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Reviving Nature, Rebuilding Livelihoods</h1>
+            <p>From restoring the ecological balance of Dal Lake to training youth and women for meaningful employment, we partner with communities and institutions to create lasting impact.</p>
+            <div class="hero-buttons">
+                <a href="#programs" class="btn-primary">Explore Our Work</a>
+                <a href="#about" class="btn-secondary">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Facts -->
+    <div class="quick-facts">
+        <div class="container">
+            <div class="facts-grid">
+                <div class="fact-card">
+                    <div class="fact-number">2015</div>
+                    <p>Established as a registered trust</p>
+                </div>
+                <div class="fact-card">
+                    <div class="fact-number">5+</div>
+                    <p>Flagship programs across Kashmir</p>
+                </div>
+                <div class="fact-card">
+                    <div class="fact-number">1000+</div>
+                    <p>Community members trained</p>
+                </div>
+                <div class="fact-card">
+                    <div class="fact-number">150+</div>
+                    <p>Households impacted</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title">About Jhelum Foundation</h2>
+            <p class="section-subtitle">Working at the confluence of environment, livelihoods, education, health and gender justice</p>
+            <div class="about-content">
+                <div class="about-image"></div>
+                <div class="about-text">
+                    <h3>Our Story</h3>
+                    <p>Jhelum Foundation began with a simple but urgent observation: environmental degradation and social exclusion are tightly linked. When local ecosystems fail, traditional livelihoods vanish — and the burden falls hardest on women, youth and marginalized communities.</p>
+                    <p>We build programs that treat those links holistically. Combining ecological restoration with skills training, market-linkages and advocacy, our approach is practical, scalable and people-centred.</p>
+                    <h3 style="margin-top: 2rem;">Our Approach</h3>
+                    <p><strong>Integrated design:</strong> Projects combine ecological, social and economic interventions so environmental health and livelihoods improve together.</p>
+                    <p><strong>Partnership-led:</strong> We work with government departments, the Indian Army, private travel platforms, and local stakeholders.</p>
+                    <p><strong>Community ownership:</strong> Local residents co-design activities and manage assets to ensure sustainability.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Founders Section -->
+    <section class="founders">
+        <div class="container">
+            <h2 class="section-title">Leadership</h2>
+            <div class="founders-grid">
+                <div class="founder-card">
+                    <div class="founder-header">
+                        <div class="founder-avatar">MM</div>
+                        <div class="founder-info">
+                            <h3>Majid Maqbool</h3>
+                            <p>Founder, Jhelum Foundation</p>
+                        </div>
+                    </div>
+                    <p class="founder-message">Jhelum Foundation was established in 2015 with a clear purpose: to create sustainable, community-driven solutions for social and environmental challenges in Kashmir and beyond. We believe meaningful development must be inclusive, responsible, and collaborative. Our journey continues with an unwavering commitment to people, nature, and sustainable progress.</p>
+                </div>
+                <div class="founder-card">
+                    <div class="founder-header">
+                        <div class="founder-avatar">SA</div>
+                        <div class="founder-info">
+                            <h3>Sartaj Ahmad</h3>
+                            <p>Co-Founder, Jhelum Foundation</p>
+                        </div>
+                    </div>
+                    <p class="founder-message">At Jhelum Foundation, we see empowerment as the foundation of development. Our focus is on creating practical opportunities through skill development, livelihood generation, and inclusive community programs. Through partnerships and innovation, we aim to enable youth, women, and marginalized communities to become self-reliant and resilient.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Programs Section -->
+    <section id="programs">
+        <div class="container">
+            <h2 class="section-title">Our Flagship Programs</h2>
+            <p class="section-subtitle">Comprehensive initiatives designed for measurable, sustainable impact</p>
+            <div class="programs-grid">
+                <div class="program-card">
+                    <div class="program-image" style="background-image: url('https://images.unsplash.com/photo-1547036967-23d11aacaee0?w=800')"></div>
+                    <div class="program-content">
+                        <h3>AzmatEDal</h3>
+                        <p>A multi-year ecological restoration mission to restore Dal Lake's water quality, reduce pollution, and rebuild tourism-linked livelihoods for communities that depend on the lake.</p>
+                        <div class="program-tags">
+                            <span class="tag">Lake Restoration</span>
+                            <span class="tag">Tourism</span>
+                            <span class="tag">Water Quality</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="program-card">
+                    <div class="program-image" style="background-image: url('https://images.unsplash.com/photo-1452860606245-08befc0ff44b?w=800')"></div>
+                    <div class="program-content">
+                        <h3>KhabeTabir</h3>
+                        <p>Cultural revival & handicraft livelihoods initiative that documents, preserves and commercializes traditional Kashmiri handicrafts while creating market access for artisans.</p>
+                        <div class="program-tags">
+                            <span class="tag">Handicrafts</span>
+                            <span class="tag">Cultural Heritage</span>
+                            <span class="tag">Market Access</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="program-card">
+                    <div class="program-image" style="background-image: url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800')"></div>
+                    <div class="program-content">
+                        <h3>Seekho Aur Kamwo</h3>
+                        <p>Vocational training program offering market-relevant courses in hospitality, IT, tailoring, and health support services with strong placement support and employer linkages.</p>
+                        <div class="program-tags">
+                            <span class="tag">Skill Training</span>
+                            <span class="tag">PMKVY Aligned</span>
+                            <span class="tag">Employment</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="program-card">
+                    <div class="program-image" style="background-image: url('https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800')"></div>
+                    <div class="program-content">
+                        <h3>Mai Roshin</h3>
+                        <p>Women's empowerment program expanding women's economic participation through tailored training, micro-enterprise grants, and community safety-net systems.</p>
+                        <div class="program-tags">
+                            <span class="tag">Women Empowerment</span>
+                            <span class="tag">Microenterprise</span>
+                            <span class="tag">Financial Literacy</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="program-card">
+                    <div class="program-image" style="background-image: url('https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=800')"></div>
+                    <div class="program-content">
+                        <h3>SIPDA</h3>
+                        <p>Social Inclusion & Placement Driven Action ensures marginalized groups gain access to market-linked skills and job placement services with barrier reduction support.</p>
+                        <div class="program-tags">
+                            <span class="tag">Social Inclusion</span>
+                            <span class="tag">Job Placement</span>
+                            <span class="tag">Equity</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="program-card">
+                    <div class="program-image" style="background-image: url('https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800')"></div>
+                    <div class="program-content">
+                        <h3>PMKVY Initiatives</h3>
+                        <p>Government-aligned skill development courses providing recognized certifications that improve employability through NSDC/PMKVY standards and placement support.</p>
+                        <div class="program-tags">
+                            <span class="tag">Government Aligned</span>
+                            <span class="tag">Certification</span>
+                            <span class="tag">NSDC Partner</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partners Section -->
+    <section class="partners" id="partners">
+        <div class="container">
+            <h2 class="section-title">Our Partners</h2>
+            <p class="section-subtitle" style="color: rgba(255,255,255,0.9);">Working across sectors to deliver impact at scale</p>
+            <div class="partners-grid">
+                <div class="partner-card">
+                    <h3>Indian Army</h3>
+                    <p>Authorized partner on community-engagement, ecological restoration, and skill-development initiatives in conflict-affected regions.</p>
+                </div>
+                <div class="partner-card">
+                    <h3>MakeMyTrip</h3>
+                    <p>Strategic partner for tourism-linked livelihood initiatives and market pathways for local artisans and eco-tourism entrepreneurs.</p>
+                </div>
+                <div class="partner-card">
+                    <h3>Ministry of Minority Affairs</h3>
+                    <p>Collaboration on projects aimed at reducing social exclusion and expanding access to training opportunities.</p>
+                </div>
+                <div class="partner-card">
+                    <h3>Ministry of Social Justice</h3>
+                    <p>Joint programs on social inclusion, livelihood support, and capacity building for underprivileged groups.</p>
+                </div>
+                <div class="partner-card">
+                    <h3>National Skill Development Corporation</h3>
+                    <p>Implementation partner for standardized training curricula, certification and job placement support.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Stats -->
+    <section class="impact-stats" id="impact">
+        <div class="container">
+            <h2 class="section-title" style="color: white;">Our Impact</h2>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <h3>150+</h3>
+                    <p>Households Adopted Waste Management</p>
+                </div>
+                <div class="stat-item">
+                    <h3>40+</h3>
+                    <p>Homestays Launched</p>
+                </div>
+                <div class="stat-item">
+                    <h3>30%</h3>
+                    <p>Average Income Increase</p>
+                </div>
+                <div class="stat-item">
+                    <h3>1000+</h3>
+                    <p>Youth & Women Trained</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section" id="donate">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="section-title">Get Involved</h2>
+                <p style="font-size: 1.2rem; color: var(--text-light); margin-bottom: 2rem;">Join us in creating sustainable, community-driven solutions for social and environmental challenges.</p>
+                <div class="cta-buttons">
+                    <a href="#" class="btn-primary">Donate Now</a>
+                    <a href="#" class="btn-secondary">Become a Partner</a>
+                    <a href="#" class="btn-secondary">Volunteer With Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Jhelum Foundation</h3>
+                <p>Restoring rivers, restoring lives.</p>
+                <p style="margin-top: 1rem; opacity: 0.8;">A registered trust working at the confluence of environment, livelihoods, education, health and gender justice since 2015.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#programs">Our Programs</a></li>
+                    <li><a href="#partners">Partners</a></li>
+                    <li><a href="#impact">Impact Stories</a></li>
+                    <li><a href="#donate">Donate</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Programs</h3>
+                <ul>
+                    <li><a href="#programs">AzmatEDal</a></li>
+                    <li><a href="#programs">KhabeTabir</a></li>
+                    <li><a href="#programs">Seekho Aur Kamwo</a></li>
+                    <li><a href="#programs">Mai Roshin</a></li>
+                    <li><a href="#programs">SIPDA</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Email: connect@jhelumfoundation.org</p>
+                <p>Phone: +91 XXX XXX XXXX</p>
+                <p>Location: Jammu, Kashmir</p>
+                <div class="social-links">
+                    <a href="#" class="social-icon">f</a>
+                    <a href="#" class="social-icon">T</a>
+                    <a href="#" class="social-icon">in</a>
+                    <a href="#" class="social-icon">IG</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Jhelum Foundation. All rights reserved. | Registered Trust (Est. 2015)</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scroll for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Header scroll effect
+        let lastScroll = 0;
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            const currentScroll = window.pageYOffset;
+            
+            if (currentScroll > 100) {
+                header.style.boxShadow = '0 4px 20px rgba(0,0,0,0.1)';
+            } else {
+                header.style.boxShadow = '0 2px 10px rgba(0,0,0,0.1)';
+            }
+            
+            lastScroll = currentScroll;
+        });
+
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all cards and sections
+        document.querySelectorAll('.program-card, .partner-card, .founder-card, .fact-card').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+
+        // Mobile menu toggle (basic functionality)
+        const mobileMenu = document.querySelector('.mobile-menu');
+        const navLinks = document.querySelector('.nav-links');
+        
+        mobileMenu.addEventListener('click', () => {
+            navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+            navLinks.style.position = 'absolute';
+            navLinks.style.top = '100%';
+            navLinks.style.left = '0';
+            navLinks.style.right = '0';
+            navLinks.style.background = 'white';
+            navLinks.style.flexDirection = 'column';
+            navLinks.style.padding = '2rem';
+            navLinks.style.boxShadow = '0 4px 12px rgba(0,0,0,0.1)';
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+{
+  "partners": [
+    {
+      "name": "Indian Army",
+      "description": "Authorized partner on community-engagement, ecological restoration, and skill-development initiatives in conflict-affected regions.",
+      "icon": "shield",
+      "link": null
+    },
+    {
+      "name": "MakeMyTrip",
+      "description": "Strategic partner for tourism-linked livelihood initiatives and market pathways for local artisans and eco-tourism entrepreneurs.",
+      "icon": "plane",
+      "link": null
+    },
+    {
+      "name": "Ministry of Minority Affairs",
+      "description": "Collaboration on projects aimed at reducing social exclusion and expanding access to training opportunities.",
+      "icon": "building",
+      "link": null
+    },
+    {
+      "name": "Ministry of Social Justice",
+      "description": "Joint programs on social inclusion, livelihood support, and capacity building for underprivileged groups.",
+      "icon": "users",
+      "link": null
+    },
+    {
+      "name": "National Skill Development Corporation",
+      "description": "Implementation partner for standardized training curricula, certification and job placement support.",
+      "icon": "certificate",
+      "link": null
+    }
+  ]
+}

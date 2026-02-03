@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Jhelum Foundation - Restoring rivers, restoring lives. Working at the confluence of environment, livelihoods, education, health and gender justice.">
+    <meta name="keywords" content="Dal Lake restoration, Jhelum Foundation, Kashmir livelihoods, skill development Kashmir, PMKVY training Kashmir">
+    <title>Jhelum Foundation - Restoring Rivers, Restoring Lives</title>
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo">Jhelum Foundation</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#programs">Programs</a></li>
+                <li><a href="#partners">Partners</a></li>
+                <li><a href="#impact">Impact</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <a href="#donate" class="cta-button">Donate</a>
+            <div class="mobile-menu" id="mobileMenuBtn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Reviving Nature, Rebuilding Livelihoods</h1>
+            <p>From restoring the ecological balance of Dal Lake to training youth and women for meaningful employment, we partner with communities and institutions to create lasting impact.</p>
+            <div class="hero-buttons">
+                <a href="#programs" class="btn-primary">Explore Our Work</a>
+                <a href="#about" class="btn-secondary">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Facts -->
+    <div class="quick-facts">
+        <div class="container">
+            <div class="facts-grid">
+                <div class="fact-card">
+                    <div class="fact-number">2015</div>
+                    <p>Established as a registered trust</p>
+                </div>
+                <div class="fact-card">
+                    <div class="fact-number">5+</div>
+                    <p>Flagship programs across Kashmir</p>
+                </div>
+                <div class="fact-card">
+                    <div class="fact-number">1000+</div>
+                    <p>Community members trained</p>
+                </div>
+                <div class="fact-card">
+                    <div class="fact-number">150+</div>
+                    <p>Households impacted</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title">About Jhelum Foundation</h2>
+            <p class="section-subtitle">Working at the confluence of environment, livelihoods, education, health and gender justice</p>
+            <div class="about-content">
+                <div class="about-image"></div>
+                <div class="about-text">
+                    <h3>Our Story</h3>
+                    <p>Jhelum Foundation began with a simple but urgent observation: environmental degradation and social exclusion are tightly linked. When local ecosystems fail, traditional livelihoods vanish — and the burden falls hardest on women, youth and marginalized communities.</p>
+                    <p>We build programs that treat those links holistically. Combining ecological restoration with skills training, market-linkages and advocacy, our approach is practical, scalable and people-centred.</p>
+                    <h3 style="margin-top: 2rem;">Our Approach</h3>
+                    <p><strong>Integrated design:</strong> Projects combine ecological, social and economic interventions so environmental health and livelihoods improve together.</p>
+                    <p><strong>Partnership-led:</strong> We work with government departments, the Indian Army, private travel platforms, and local stakeholders.</p>
+                    <p><strong>Community ownership:</strong> Local residents co-design activities and manage assets to ensure sustainability.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Founders Section -->
+    <section class="founders">
+        <div class="container">
+            <h2 class="section-title">Leadership</h2>
+            <div class="founders-grid">
+                <div class="founder-card">
+                    <div class="founder-header">
+                        <div class="founder-avatar">MM</div>
+                        <div class="founder-info">
+                            <h3>Majid Maqbool</h3>
+                            <p>Founder, Jhelum Foundation</p>
+                        </div>
+                    </div>
+                    <p class="founder-message">Jhelum Foundation was established in 2015 with a clear purpose: to create sustainable, community-driven solutions for social and environmental challenges in Kashmir and beyond. We believe meaningful development must be inclusive, responsible, and collaborative. Our journey continues with an unwavering commitment to people, nature, and sustainable progress.</p>
+                </div>
+                <div class="founder-card">
+                    <div class="founder-header">
+                        <div class="founder-avatar">SA</div>
+                        <div class="founder-info">
+                            <h3>Sartaj Ahmad</h3>
+                            <p>Co-Founder, Jhelum Foundation</p>
+                        </div>
+                    </div>
+                    <p class="founder-message">At Jhelum Foundation, we see empowerment as the foundation of development. Our focus is on creating practical opportunities through skill development, livelihood generation, and inclusive community programs. Through partnerships and innovation, we aim to enable youth, women, and marginalized communities to become self-reliant and resilient.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Programs Section -->
+    <section id="programs">
+        <div class="container">
+            <h2 class="section-title">Our Flagship Programs</h2>
+            <p class="section-subtitle">Comprehensive initiatives designed for measurable, sustainable impact</p>
+            <div class="programs-grid" id="programs-grid">
+                <!-- Programs loaded dynamically from flagship-programs.json -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Partners Section -->
+    <section class="partners" id="partners">
+        <div class="container">
+            <h2 class="section-title">Our Partners</h2>
+            <p class="section-subtitle">Working across sectors to deliver impact at scale</p>
+            <div class="partners-carousel">
+                <button class="carousel-btn carousel-prev" id="partnersPrev">&#8249;</button>
+                <div class="carousel-track-container">
+                    <div class="carousel-track" id="partners-track">
+                        <!-- Partners loaded dynamically from partners.json -->
+                    </div>
+                </div>
+                <button class="carousel-btn carousel-next" id="partnersNext">&#8250;</button>
+            </div>
+            <div class="carousel-dots" id="partners-dots"></div>
+        </div>
+    </section>
+
+    <!-- Impact Stats -->
+    <section class="impact-stats" id="impact">
+        <div class="container">
+            <h2 class="section-title">Our Impact</h2>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <h3>150+</h3>
+                    <p>Households Adopted Waste Management</p>
+                </div>
+                <div class="stat-item">
+                    <h3>40+</h3>
+                    <p>Homestays Launched</p>
+                </div>
+                <div class="stat-item">
+                    <h3>30%</h3>
+                    <p>Average Income Increase</p>
+                </div>
+                <div class="stat-item">
+                    <h3>1000+</h3>
+                    <p>Youth & Women Trained</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section" id="donate">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="section-title">Get Involved</h2>
+                <p style="font-size: 1.2rem; color: var(--text-light); margin-bottom: 2rem;">Join us in creating sustainable, community-driven solutions for social and environmental challenges.</p>
+                <div class="cta-buttons">
+                    <a href="#" class="btn-primary">Donate Now</a>
+                    <a href="#" class="btn-secondary">Become a Partner</a>
+                    <a href="#" class="btn-secondary">Volunteer With Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Jhelum Foundation</h3>
+                <p>Restoring rivers, restoring lives.</p>
+                <p style="margin-top: 1rem; opacity: 0.8;">A registered trust working at the confluence of environment, livelihoods, education, health and gender justice since 2015.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#programs">Our Programs</a></li>
+                    <li><a href="#partners">Partners</a></li>
+                    <li><a href="#impact">Impact Stories</a></li>
+                    <li><a href="#donate">Donate</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Programs</h3>
+                <ul>
+                    <li><a href="#programs">AzmatEDal</a></li>
+                    <li><a href="#programs">KhabeTabir</a></li>
+                    <li><a href="#programs">Seekho Aur Kamwo</a></li>
+                    <li><a href="#programs">Mai Roshin</a></li>
+                    <li><a href="#programs">SIPDA</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Email: connect@jhelumfoundation.org</p>
+                <p>Phone: +91 XXX XXX XXXX</p>
+                <p>Location: Jammu, Kashmir</p>
+                <div class="social-links">
+                    <a href="#" class="social-icon">f</a>
+                    <a href="#" class="social-icon">T</a>
+                    <a href="#" class="social-icon">in</a>
+                    <a href="#" class="social-icon">IG</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Jhelum Foundation. All rights reserved. | Registered Trust (Est. 2015)</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript Files -->
+    <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
+</body>
+</html>
