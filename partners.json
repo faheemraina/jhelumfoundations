@@ -1,12 +1,6 @@
 {
   "partners": [
     {
-      "name": "Indian Army",
-      "description": "Authorized partner on community-engagement, ecological restoration, and skill-development initiatives in conflict-affected regions.",
-      "icon": "shield",
-      "link": null
-    },
-    {
       "name": "MakeMyTrip",
       "description": "Strategic partner for tourism-linked livelihood initiatives and market pathways for local artisans and eco-tourism entrepreneurs.",
       "icon": "plane",
@@ -28,6 +22,12 @@
       "name": "National Skill Development Corporation",
       "description": "Implementation partner for standardized training curricula, certification and job placement support.",
       "icon": "certificate",
+      "link": null
+    },
+    {
+      "name": "Several Projects with Indian Army",
+      "description": "Authorized partner on community-engagement, ecological restoration, and skill-development initiatives in conflict-affected regions.",
+      "icon": "shield",
       "link": null
     }
   ]

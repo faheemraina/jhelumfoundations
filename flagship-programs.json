@@ -1,17 +1,17 @@
 {
   "programs": [
     {
-      "title": "AzmatEDal",
+      "title": "Azmat-E-Dal",
       "description": "A multi-year ecological restoration mission to restore Dal Lake's water quality, reduce pollution, and rebuild tourism-linked livelihoods for communities that depend on the lake.",
       "image": "images/programs/azmat-e-dal.jpg",
       "tags": ["Lake Restoration", "Tourism", "Water Quality"],
       "link": null
     },
     {
-      "title": "KhabeTabir",
-      "description": "Cultural revival & handicraft livelihoods initiative that documents, preserves and commercializes traditional Kashmiri handicrafts while creating market access for artisans.",
+      "title": "Khab-E-Tabir",
+      "description": " Flagship programme for underprivileged women victims of cross border terrorism with 161-INF BDE Boniyar Baramula",
       "image": "images/programs/khabe-tabir.jpg",
-      "tags": ["Handicrafts", "Cultural Heritage", "Market Access"],
+      "tags": ["Women Empowerment", "Trades", "Handicrafts"],
       "link": null
     },
     {
@@ -22,7 +22,7 @@
       "link": null
     },
     {
-      "title": "Mai Roshin",
+      "title": "Nai Roshini",
       "description": "Women's empowerment program expanding women's economic participation through tailored training, micro-enterprise grants, and community safety-net systems.",
       "image": "images/programs/mai-roshin.jpg",
       "tags": ["Women Empowerment", "Microenterprise", "Financial Literacy"],
