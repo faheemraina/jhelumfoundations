@@ -1,0 +1,12 @@
+{
+    "slides": [
+        {
+            "image": "images/hero-slides/slide1.jpg",
+            "alt": "Restoring Dal Lake"
+        },
+        {
+            "image": "images/hero-slides/slide2.jpg",
+            "alt": "Community Training"
+        }
+    ]
+}

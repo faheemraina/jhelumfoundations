@@ -10,6 +10,9 @@ document.addEventListener('DOMContentLoaded', function() {
     // Load partners carousel from JSON
     loadPartnersCarousel();
 
+    // Load hero slides
+    loadHeroSlides();
+
     // Smooth scroll
     initSmoothScroll();
 
