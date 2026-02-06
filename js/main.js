@@ -285,3 +285,75 @@ document.addEventListener('click', (e) => {
         });
     }
 });
+
+// Load Hero Slides from JSON
+async function loadHeroSlides() {
+    const heroSection = document.querySelector('.hero');
+    if (!heroSection) return;
+
+    try {
+        const response = await fetch('hero-slides.json');
+        const data = await response.json();
+        const slides = data.slides;
+
+        if (!slides || slides.length === 0) return;
+
+        const slideElements = [];
+
+        // Helper to trigger image download for a specific slide
+        const loadSlideImage = (index) => {
+            if (index >= 0 && index < slideElements.length) {
+                const el = slideElements[index];
+                if (el.dataset.bg) {
+                    el.style.backgroundImage = `url('${el.dataset.bg}')`;
+                    el.removeAttribute('data-bg'); // Clean up
+                }
+            }
+        };
+
+        slides.forEach((slide, index) => {
+            const div = document.createElement('div');
+            div.className = `hero-slide ${index === 0 ? 'active' : ''}`;
+            
+            // LAZY LOADING LOGIC:
+            // Only set background-image immediately for the first slide.
+            // For others, store it in dataset.bg to be loaded later.
+            if (index === 0) {
+                div.style.backgroundImage = `url('${slide.image}')`;
+            } else {
+                div.dataset.bg = slide.image;
+            }
+            
+            div.setAttribute('role', 'img');
+            div.setAttribute('aria-label', slide.alt || 'Hero background image');
+            
+            heroSection.appendChild(div);
+            slideElements.push(div);
+        });
+
+        // Optimization: Buffer the 2nd slide immediately so the first transition is smooth
+        if (slideElements.length > 1) {
+            loadSlideImage(1);
+        }
+
+        // Start cycling
+        if (slideElements.length > 1) {
+            let currentSlide = 0;
+            setInterval(() => {
+                // 1. Move to next slide
+                slideElements[currentSlide].classList.remove('active');
+                currentSlide = (currentSlide + 1) % slideElements.length;
+                slideElements[currentSlide].classList.add('active');
+
+                // 2. Pre-load the NEXT slide that will be needed in 5 seconds
+                // (This ensures we always have one buffered ahead)
+                const nextUpIndex = (currentSlide + 1) % slideElements.length;
+                loadSlideImage(nextUpIndex);
+
+            }, 5000); 
+        }
+
+    } catch (error) {
+        console.error('Error loading hero slides:', error);
+    }
+}

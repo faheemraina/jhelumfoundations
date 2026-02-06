@@ -5,8 +5,44 @@
             "alt": "Restoring Dal Lake"
         },
         {
-            "image": "images/hero-slides/slide2.jpg",
+            "image": "images/hero-slides/slide2.JPG",
             "alt": "Community Training"
+        },
+        {
+            "image": "images/hero-slides/slide3.JPG",
+            "alt": "River Cleaning Drive"
+        },
+        {
+            "image": "images/hero-slides/slide4.JPG",
+            "alt": "Educational Outreach"
+        },
+        {
+            "image": "images/hero-slides/slide5.JPG",
+            "alt": "Sustainable Livelihoods"
+        },
+        {
+            "image": "images/hero-slides/slide6.JPG",
+            "alt": "Wetland Protection"
+        },
+        {
+            "image": "images/hero-slides/slide7.JPG",
+            "alt": "Cultural Heritage"
+        },
+        {
+            "image": "images/hero-slides/slide8.JPG",
+            "alt": "Youth Leadership"
+        },
+        {
+            "image": "images/hero-slides/slide9.JPG",
+            "alt": "Reforestation Project"
+        },
+        {
+            "image": "images/hero-slides/slide10.JPG",
+            "alt": "Clean Energy Solutions"
+        },
+        {
+            "image": "images/hero-slides/slide11.JPG",
+            "alt": "Disaster Resilience"
         }
     ]
 }

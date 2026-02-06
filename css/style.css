@@ -729,13 +729,13 @@ footer {
 .fade-in {
     animation: fadeInUp 0.8s ease;
 }
-```
+
 /* 
 ---
 
 ## File: `css/responsive.css` */
 
-```css
+
 /* ===================================
    Tablet Responsive (768px - 1024px)
    =================================== */
