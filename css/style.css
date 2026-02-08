@@ -382,6 +382,8 @@ section {
     overflow: hidden;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
 }
 
 .program-card:hover {
@@ -393,16 +395,37 @@ section {
     height: 220px;
     background-size: cover;
     background-position: center;
+    flex-shrink: 0;
 }
 
 .program-content {
     padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
 }
 
 .program-content h3 {
     color: var(--primary-blue);
     margin-bottom: 1rem;
     font-size: 1.5rem;
+}
+
+/* ... existing styles ... */
+
+.program-link {
+    display: inline-block;
+    margin-top: auto; /* Pushes link to bottom */
+    color: var(--secondary-blue);
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s;
+    padding-top: 1rem;
+}
+
+.program-link:hover {
+    color: var(--primary-blue);
+    transform: translateX(5px);
 }
 
 .program-content p {

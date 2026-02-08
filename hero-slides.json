@@ -1,47 +1,47 @@
 {
     "slides": [
         {
-            "image": "images/hero-slides/slide1.jpg",
+            "image": "images/hero-slides/slide1.webp",
             "alt": "Restoring Dal Lake"
         },
         {
-            "image": "images/hero-slides/slide2.JPG",
+            "image": "images/hero-slides/slide2.webp",
             "alt": "Community Training"
         },
         {
-            "image": "images/hero-slides/slide3.JPG",
+            "image": "images/hero-slides/slide3.webp",
             "alt": "River Cleaning Drive"
         },
         {
-            "image": "images/hero-slides/slide4.JPG",
+            "image": "images/hero-slides/slide4.webp",
             "alt": "Educational Outreach"
         },
         {
-            "image": "images/hero-slides/slide5.JPG",
+            "image": "images/hero-slides/slide5.webp",
             "alt": "Sustainable Livelihoods"
         },
         {
-            "image": "images/hero-slides/slide6.JPG",
+            "image": "images/hero-slides/slide6.webp",
             "alt": "Wetland Protection"
         },
         {
-            "image": "images/hero-slides/slide7.JPG",
+            "image": "images/hero-slides/slide7.webp",
             "alt": "Cultural Heritage"
         },
         {
-            "image": "images/hero-slides/slide8.JPG",
+            "image": "images/hero-slides/slide8.webp",
             "alt": "Youth Leadership"
         },
         {
-            "image": "images/hero-slides/slide9.JPG",
+            "image": "images/hero-slides/slide9.webp",
             "alt": "Reforestation Project"
         },
         {
-            "image": "images/hero-slides/slide10.JPG",
+            "image": "images/hero-slides/slide10.webp",
             "alt": "Clean Energy Solutions"
         },
         {
-            "image": "images/hero-slides/slide11.JPG",
+            "image": "images/hero-slides/slide11.webp",
             "alt": "Disaster Resilience"
         }
     ]
