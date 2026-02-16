@@ -4,30 +4,35 @@
       "name": "MakeMyTrip Foundation",
       "description": "Strategic partner for tourism-linked livelihood initiatives and market pathways for local artisans and eco-tourism entrepreneurs.",
       "icon": "plane",
-      "link": null
+      "image": "images/partners/mmt.png",
+      "link": "https://sustainability.makemytrip.com/foundation"
     },
     {
       "name": "Ministry of Minority Affairs",
       "description": "Collaboration on projects aimed at reducing social exclusion and expanding access to training opportunities.",
       "icon": "building",
-      "link": null
+      "image": "images/partners/minority.png",
+      "link": "https://www.minorityaffairs.gov.in/"
     },
     {
       "name": "Ministry of Social Justice",
       "description": "Joint programs on social inclusion, livelihood support, and capacity building for underprivileged groups.",
       "icon": "users",
-      "link": null
+      "image": "images/partners/socialjustice.png",
+      "link": "https://socialjustice.gov.in/"
     },
     {
       "name": "National Skill Development Corporation",
       "description": "Implementation partner for standardized training curricula, certification and job placement support.",
       "icon": "certificate",
-      "link": null
+      "image": "images/partners/nsdc.png",
+      "link": "https://nsdcindia.org/"
     },
     {
       "name": "Several Projects with Indian Army",
       "description": "Authorized partner on community-engagement, ecological restoration, and skill-development initiatives in conflict-affected regions.",
       "icon": "shield",
+      "image": null,
       "link": null
     }
   ]

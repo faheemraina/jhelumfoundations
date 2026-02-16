@@ -79,9 +79,11 @@ async function loadPartnersCarousel() {
         track.innerHTML = data.partners.map(partner => `
             <div class="partner-slide">
                 <div class="partner-card">
-                    <div class="partner-icon">
-                        ${partnerIcons[partner.icon] || partnerIcons.building}
-                    </div>
+                    ${partner.image ?
+                        `<div class="partner-logo">
+                            <img src="${partner.image}" alt="${partner.name}">
+                        </div>` : ''
+                    }
                     <h3>${partner.name}</h3>
                     <p>${partner.description}</p>
                     ${partner.link ? `<a href="${partner.link}" class="partner-link" target="_blank">Learn More →</a>` : ''}
