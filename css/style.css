@@ -1000,3 +1000,41 @@ footer {
         font-size: 1.2rem;
     }
 }
+
+/* ===================================
+   Partners Carousel Mobile Adjustments
+   =================================== */
+@media (max-width: 768px) {
+    .partners-carousel {
+        position: relative;
+        display: block; /* Remove flex behavior that might restrict width */
+    }
+
+    .carousel-track-container {
+        width: 100%;
+        margin: 0;
+    }
+
+    .carousel-btn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 10;
+        width: 40px;
+        height: 40px;
+        background: rgba(30, 58, 138, 0.8); /* Make them more visible/consistent with theme */
+    }
+
+    .carousel-btn:hover {
+        background: rgba(30, 58, 138, 1);
+        transform: translateY(-50%) scale(1.1);
+    }
+    
+    .carousel-prev {
+        left: 0;
+    }
+    
+    .carousel-next {
+        right: 0;
+    }
+}

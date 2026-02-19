@@ -19,28 +19,28 @@
       "description": "Vocational training program offering market-relevant courses in hospitality, IT, tailoring, and health support services with strong placement support and employer linkages.",
       "image": "images/programs/seekho-aur-kamao.jpg",
       "tags": ["Skill Training", "PMKVY Aligned", "Employment"],
-      "link": null
+      "link": "https://www.minorityaffairs.gov.in/show_content.php?lang=1&level=2&ls_id=764&lid=108"
     },
     {
       "title": "Nai Roshini",
       "description": "Women's empowerment program expanding women's economic participation through tailored training, micro-enterprise grants, and community safety-net systems.",
       "image": "images/programs/nai-roshni.jpg",
       "tags": ["Women Empowerment", "Microenterprise", "Financial Literacy"],
-      "link": null
+      "link": "https://www.minorityaffairs.gov.in/show_content.php?lang=1&level=1&ls_id=79&lid=79"
     },
     {
       "title": "SIPDA",
       "description": "Social Inclusion & Placement Driven Action ensures marginalized groups gain access to market-linked skills and job placement services with barrier reduction support.",
       "image": "images/programs/sipda.jpg",
       "tags": ["Social Inclusion", "Job Placement", "Equity"],
-      "link": null
+      "link": "https://depwd.gov.in/en/sipda/"
     },
     {
       "title": "PMKVY Initiatives",
       "description": "Government-aligned skill development courses providing recognized certifications that improve employability through NSDC/PMKVY standards and placement support.",
       "image": "images/programs/pmkvy.jpg",
       "tags": ["Government Aligned", "Certification", "NSDC Partner"],
-      "link": null
+      "link": "https://www.skillindiadigital.gov.in/pmkvy-dashboard"
     }
   ]
 }
