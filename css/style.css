@@ -51,10 +51,10 @@ nav {
     align-items: center;
 }
 
-.logo {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--primary-blue);
+.logo img {
+    height: 62px;
+    width: auto;
+    padding-top: 5px;
 }
 
 .nav-links {
@@ -107,7 +107,7 @@ nav {
    Hero Section
    =================================== */
 .hero {
-    margin-top: 80px;
+    margin-top: 70px;
     height: 600px;
     /* Removing static background for slideshow */
     background: var(--primary-blue);
@@ -149,10 +149,10 @@ nav {
 
 @keyframes heroZoom {
     from {
-        background-size: 100%;
+        transform: scale(1);
     }
     to {
-        background-size: 106%;
+        transform: scale(1.06);
     }
 }
 
@@ -833,6 +833,10 @@ footer {
 
     .cta-button {
         display: none;
+    }
+
+    .logo img {
+        height: 50px;
     }
 
     /* Hero Section */
