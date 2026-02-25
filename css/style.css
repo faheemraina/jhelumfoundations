@@ -634,7 +634,9 @@ section {
 }
 
 .partner-link:hover {
-    opacity: 1;
+    color: var(--accent-green);
+    transform: translateX(5px);
+    
 }
 
 /* ===================================
